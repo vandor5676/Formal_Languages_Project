@@ -1,4 +1,6 @@
+use std::time::Instant;
 fn main() {
+    let now = Instant::now();
     println!("DFA in Rust 🦀 ");
     let input: &'static str = "aababcaaa";
 
@@ -80,5 +82,6 @@ fn main() {
     {
         println!("The string was Not accepted");
     }
+    println!("{:?}", now.elapsed());
 
 }
