@@ -1,5 +1,4 @@
 import time
-timestart = time.time()
 def startState(char):
     if(char == 'a'):
         return 1
@@ -26,7 +25,7 @@ def acceptState():
     return 3
 
 
-def isAccepted(input = "aababcaaa"):
+def isAccepted(input = "aabcd"):
     length = len(input)
     dfa  =0
     for i in range(length):
@@ -46,8 +45,9 @@ def isAccepted(input = "aababcaaa"):
 
 if __name__ == "__main__":
     print("DFA in Python 🐍 ");
+    timestart = time.time()
     isAccepted()
+    elapsedtime = (time.time() - timestart)
+    print('%fs' % elapsedtime)
+    print('%fms' %(elapsedtime * 1000))
 
-elapsedtime = (time.time() - timestart)
-print('%fs' % elapsedtime)
-print('%fms' %(elapsedtime * 1000))
